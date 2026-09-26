@@ -225,6 +225,18 @@
 
     <!-- Controles centrales y barra de progreso -->
     <div class="bar-center">
+      <!-- Barra de tiempo interactiva -->
+      <div class="progress-bar-container">
+        <span class="time-label" id="currentTime">0:00</span>
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+          <div class="progress-handle" id="progressHandle"></div>
+          <!-- Indicador visual del punto de Crossfade -->
+          <div class="crossfade-zone" id="crossfadeZone" title="Zona de Crossfade"></div>
+        </div>
+        <span class="time-label" id="durationTime">0:00</span>
+      </div>
+
       <div class="playback-buttons">
         <!-- Shuffle -->
         <button class="btn-ctrl" id="btnShuffle" title="Smart Shuffle (S)">
@@ -274,18 +286,6 @@
           </svg>
           <span class="repeat-indicator" id="repeatIndicator"></span>
         </button>
-      </div>
-
-      <!-- Barra de tiempo interactiva -->
-      <div class="progress-bar-container">
-        <span class="time-label" id="currentTime">0:00</span>
-        <div class="progress-track" id="progressTrack">
-          <div class="progress-fill" id="progressFill"></div>
-          <div class="progress-handle" id="progressHandle"></div>
-          <!-- Indicador visual del punto de Crossfade -->
-          <div class="crossfade-zone" id="crossfadeZone" title="Zona de Crossfade"></div>
-        </div>
-        <span class="time-label" id="durationTime">0:00</span>
       </div>
     </div>
 
