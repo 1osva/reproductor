@@ -661,3 +661,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2800);
   }
 });
+
+// --- Menú móvil (sidebar deslizable) ---
+const btnMobileMenu = document.getElementById('btnMobileMenu');
+const sidebarEl = document.querySelector('.sidebar');
+if (btnMobileMenu && sidebarEl) {
+  btnMobileMenu.addEventListener('click', () => {
+    sidebarEl.classList.toggle('sidebar-open');
+  });
+}
