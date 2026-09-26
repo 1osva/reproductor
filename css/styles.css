@@ -1120,13 +1120,6 @@ body.dark-theme {
   .volume-container {
     display: none;
   }
-  .player-bar {
-    justify-content: center;
-  }
-  .bar-center {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
   .playback-buttons {
     gap: 14px;
   }
@@ -1135,14 +1128,6 @@ body.dark-theme {
   }
   .queue-section {
     margin-top: 20px;
-  }
-  .player-bar {
-    padding-top: 18px;
-    align-items: flex-start;
-  }
-  .bar-center {
-    gap: 10px;
-    margin-top: 2px;
   }
   .progress-bar-container {
     display: grid;
@@ -1163,5 +1148,22 @@ body.dark-theme {
   #durationTime {
     grid-area: dur;
     justify-self: end;
+  }
+
+  /* Altura y espacio de seguridad para que no choque con la barra de gestos del celular */
+  :root {
+    --player-bar-height: 148px;
+  }
+  .player-bar {
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 16px;
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 10px));
+  }
+  .bar-center {
+    flex: 0 1 auto;
+    max-width: 100%;
+    gap: 10px;
+    margin-top: 0;
   }
 }
