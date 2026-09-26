@@ -1136,4 +1136,32 @@ body.dark-theme {
   .queue-section {
     margin-top: 20px;
   }
+  .player-bar {
+    padding-top: 18px;
+    align-items: flex-start;
+  }
+  .bar-center {
+    gap: 10px;
+    margin-top: 2px;
+  }
+  .progress-bar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "track track"
+      "cur   dur";
+    gap: 6px 0;
+  }
+  .progress-track {
+    grid-area: track;
+    width: 100%;
+  }
+  #currentTime {
+    grid-area: cur;
+    justify-self: start;
+  }
+  #durationTime {
+    grid-area: dur;
+    justify-self: end;
+  }
 }
