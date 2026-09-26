@@ -665,8 +665,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Menú móvil (sidebar deslizable) ---
 const btnMobileMenu = document.getElementById('btnMobileMenu');
 const sidebarEl = document.querySelector('.sidebar');
-if (btnMobileMenu && sidebarEl) {
+const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+const menuIconOpen = document.getElementById('menuIconOpen');
+const menuIconClose = document.getElementById('menuIconClose');
+
+function openMobileSidebar() {
+  sidebarEl.classList.add('sidebar-open');
+  sidebarBackdrop.classList.add('active');
+  menuIconOpen.style.display = 'none';
+  menuIconClose.style.display = 'block';
+}
+function closeMobileSidebar() {
+  sidebarEl.classList.remove('sidebar-open');
+  sidebarBackdrop.classList.remove('active');
+  menuIconOpen.style.display = 'block';
+  menuIconClose.style.display = 'none';
+}
+if (btnMobileMenu && sidebarEl && sidebarBackdrop) {
   btnMobileMenu.addEventListener('click', () => {
-    sidebarEl.classList.toggle('sidebar-open');
+    sidebarEl.classList.contains('sidebar-open') ? closeMobileSidebar() : openMobileSidebar();
   });
+  sidebarBackdrop.addEventListener('click', closeMobileSidebar);
 }
