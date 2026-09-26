@@ -536,6 +536,8 @@ body.dark-theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .queue-title-group {
@@ -1041,5 +1043,33 @@ body.dark-theme {
   }
   .sidebar.sidebar-open {
     transform: translateX(0);
+  }
+  .player-bar {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .bar-left {
+    min-width: 0;
+    max-width: 40%;
+    flex: 1 1 auto;
+    gap: 8px;
+  }
+  .mini-artist {
+    display: none;
+  }
+  .bar-center {
+    max-width: none;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+  .bar-right {
+    width: auto;
+    gap: 8px;
+  }
+  .crossfade-indicator {
+    display: none;
+  }
+  .volume-container .custom-slider {
+    width: 60px;
   }
 }
