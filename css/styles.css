@@ -42,6 +42,7 @@ body.dark-theme {
   color: var(--text-primary);
   font-family: var(--font-main);
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   user-select: none;
   -webkit-font-smoothing: antialiased;
@@ -54,6 +55,7 @@ body.dark-theme {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   z-index: 0;
   pointer-events: none;
   background: 
@@ -69,6 +71,7 @@ body.dark-theme {
   z-index: 150;
   display: flex;
   height: calc(100vh - var(--player-bar-height));
+  height: calc(100dvh - var(--player-bar-height));
   width: 100vw;
 }
 
@@ -1033,6 +1036,7 @@ body.dark-theme {
     top: 0;
     left: 0;
     height: 100vh;
+    height: 100dvh;
     width: 85%;
     max-width: 320px;
     z-index: 1000;
