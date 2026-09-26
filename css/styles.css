@@ -1106,18 +1106,30 @@ body.dark-theme {
     width: 34px;
     height: 34px;
   }
-  /* Barra estilo Spotify: solo controles esenciales, sin encimados */
-  .btnShuffle-hide-helper {}
-  #btnShuffle,
-  #btnRepeat,
-  .repeat-indicator,
-  .volume-container {
+  /* Barra estilo reproductor convencional: se quita el texto sin uso y se centran los controles */
+  .bar-left {
     display: none;
   }
   .bar-right {
     width: auto;
   }
+  .volume-container {
+    display: none;
+  }
+  .player-bar {
+    justify-content: center;
+  }
+  .bar-center {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
   .playback-buttons {
     gap: 14px;
+  }
+  .visualizer-container {
+    min-height: 220px;
+  }
+  .queue-section {
+    margin-top: 20px;
   }
 }
