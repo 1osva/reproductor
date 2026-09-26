@@ -1044,6 +1044,16 @@ body.dark-theme {
   .sidebar.sidebar-open {
     transform: translateX(0);
   }
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 999;
+  }
+  .sidebar-backdrop.active {
+    display: block;
+  }
   .player-bar {
     padding: 0 12px;
     gap: 8px;
@@ -1071,5 +1081,29 @@ body.dark-theme {
   }
   .volume-container .custom-slider {
     width: 60px;
+  }
+  :root {
+    --player-bar-height: 108px;
+  }
+  .player-bar {
+    padding: 10px 14px;
+  }
+  .bar-center {
+    gap: 10px;
+  }
+  .playback-buttons {
+    gap: 22px;
+  }
+  .btn-ctrl {
+    width: 44px;
+    height: 44px;
+  }
+  .btn-play {
+    width: 56px;
+    height: 56px;
+  }
+  .mini-cover {
+    width: 40px;
+    height: 40px;
   }
 }
