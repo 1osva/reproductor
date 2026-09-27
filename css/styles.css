@@ -1168,20 +1168,4 @@ body.dark-theme {
   }
 }
 
-/* desde aqui pongo lo de gemini
-
-/* Corrección de diseño para visualización en aplicaciones móviles (APK WebView) */
-@media (max-width: 768px) {
-    html, body {
-        height: auto !important;
-        overflow-y: auto !important;
-    }
-    /* Fuerza al contenedor principal a ocupar el espacio correcto sin empujar el reproductor al fondo */
-    main, .container {
-        min-height: 100vh !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-    }
-}
 
